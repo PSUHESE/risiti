@@ -6,7 +6,7 @@ function callTess($inputImage, $outputFileName)
   $command = "/usr/bin/tesseract " . $inputImage . " " . $outputFileName . "2>&1";
 
   exec($command, $output);
-  $contents = file_get_contents($outputFileName . ".txt");
+  $contents = file_get_contents($outputFileName . "2.txt");
   return $contents;
 }
 ?>
