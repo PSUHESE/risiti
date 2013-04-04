@@ -23,7 +23,7 @@ function displayText($name, $values)
   $folder = "./testDump";
   $extension = ".jpg";
 
-  if (is_null($values[$name])
+  if (is_null($values[$name]))
     echo "\"\"";
   else
     echo "\"" . $values[$name] . "\"";
@@ -44,7 +44,7 @@ foreach ($filenames as $file)
 <html>
 <body>
   <h1> Mashavu Risiti </h1>
-  <form action="verify.php" method="post">
+  <form action="export.php" method="post">
 
     <?php displayImage("name"); ?>
     Name: <input type="text" name="name" value=<?php displayText("name", $values);?>><br />
@@ -56,7 +56,7 @@ foreach ($filenames as $file)
     Birthday (dd|mm|yy): <input type="text" name="birthday" value=<?php displayText("birthday", $values);?>><br />
 
     <?php displayImage("village"); ?><br />
-    Sub-location: <input type="text" name="sublocation" value=<?php displayText("village", $values);?>><br />
+    Sub-location: <input type="text" name="village" value=<?php displayText("village", $values);?>><br />
 
     <?php displayImage("weight"); ?><br />
     Weight <input type="text" name="weight" value=<?php displayText("weight", $values);?>><br />
