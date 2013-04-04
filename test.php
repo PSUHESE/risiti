@@ -4,7 +4,7 @@
 function callTess($inputImage, $outputFileName)
 {
   $output = array();
-  $command = "/usr/bin/tesseract " . $inputImage . " " . $outputFileName . " 2>&1";
+  $command = "/usr/bin/tesseract " . $inputImage . " " . $outputFileName . " -psm 8 characters 2>&1";
 
   exec($command, $output);
   $contents = file_get_contents($outputFileName . ".txt");
@@ -71,7 +71,7 @@ foreach ($filenames as $file)
     Blood Pressure <input type="text" name="blood" value=<?php displayText("blood", $values);?>><br /><!-- / <input type="text" name="diastolic"><br /> -->
 
     <?php displayImage("heart"); ?><br />
-    Heart Rate <intput type="text" name="heart" value=<?php displayText("heart", $values);?>><br />
+    Heart Rate <intput type="text" name="heart" value=<?php displayText("heart", $values);?>>><br />
 
     <input type="submit">
   </form>
