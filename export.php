@@ -1,21 +1,21 @@
 <?php
-  $name = $_POST('name');
+  $name = $_POST['name'];
 
-  $phone = $_POST("phone");
+  $phone = $_POST["phone"];
 
-  $birthday = $_POST("birthday");
+  $birthday = $_POST["birthday"];
 
-  $village = $_POST("village");
+  $village = $_POST["village"];
 
-  $weight = $_POST("weight");
+  $weight = $_POST["weight"];
 
-  $height = $_POST("height");
+  $height = $_POST["height"];
 
-  $bmi = $_POST("bmi");
+  $bmi = $_POST["bmi"];
 
-  $blood = $_POST("blood");
+  $blood = $_POST["blood"];
 
-  $heart = $_POST("heart");
+  $heart = $_POST["heart"];
 
   echo $name . "," . $phone . "," . $birthday . "," . $village . "," . $weight . "," . $height . "," . $bmi . "," . $blood . "," . $heart;
 
