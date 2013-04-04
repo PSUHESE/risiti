@@ -68,10 +68,10 @@ foreach ($filenames as $file)
     BMI <input type="text" name="bmi" value=<?php displayText("bmi", $values);?>><br />
 
     <?php displayImage("blood"); ?><br />
-    Blood Pressure <input type="text" name="systolic" value=<?php displayText("blood", $values);?>><br /><!-- / <input type="text" name="diastolic"><br /> -->
+    Blood Pressure <input type="text" name="blood" value=<?php displayText("blood", $values);?>><br /><!-- / <input type="text" name="diastolic"><br /> -->
 
     <?php displayImage("heart"); ?><br />
-    Heart Rate <intput type="text" name="heartrate" value=<?php displayText("heart", $values);?>><br />
+    Heart Rate <intput type="text" name="heart" value=<?php displayText("heart", $values);?>><br />
 
     <input type="submit">
   </form>
