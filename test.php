@@ -12,7 +12,7 @@ function callTess($inputImage, $outputFileName)
 function displayImage($image)
 {
   $folder = "./testDump";
-  $filenames = ("name", "bmi", "phone", "village", "weight", "blood", "heart", "case", "date", "birthday", "height");
+  $filenames = array("name", "bmi", "phone", "village", "weight", "blood", "heart", "case", "date", "birthday", "height");
   $extension = ".jpg";
   echo "<img src=\"" . $folder . DIRECTORY_SEPARATOR . $image . $extension . "\"/><br />";
 }
@@ -20,7 +20,7 @@ function displayImage($image)
 function displayText($name)
 {
   $folder = "./testDump";
-  $filenames = ("name", "bmi", "phone", "village", "weight", "blood", "heart", "case", "date", "birthday", "height");
+  $filenames = array("name", "bmi", "phone", "village", "weight", "blood", "heart", "case", "date", "birthday", "height");
   $extension = ".jpg";
   echo "\"" . $values[$name] . "\"";
 }
