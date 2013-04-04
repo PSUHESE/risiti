@@ -1,5 +1,6 @@
 <?php
 
+
 function callTess($inputImage, $outputFileName)
 {
   $output = array();
@@ -9,25 +10,29 @@ function callTess($inputImage, $outputFileName)
   $contents = file_get_contents($outputFileName . ".txt");
   return $contents;
 }
+
 function displayImage($image)
 {
   $folder = "./testDump";
-  $filenames = array("name", "bmi", "phone", "village", "weight", "blood", "heart", "case", "date", "birthday", "height");
   $extension = ".jpg";
   echo "<img src=\"" . $folder . DIRECTORY_SEPARATOR . $image . $extension . "\"/><br />";
 }
 
-function displayText($name)
+function displayText($name, $values)
 {
   $folder = "./testDump";
-  $filenames = array("name", "bmi", "phone", "village", "weight", "blood", "heart", "case", "date", "birthday", "height");
   $extension = ".jpg";
-  echo "\"" . $values[$name] . "\"";
+
+  if (is_null($values[$name])
+    echo "\"\"";
+  else
+    echo "\"" . $values[$name] . "\"";
 }
 
 $folder = "./testDump";
 $filenames = array("name", "bmi", "phone", "village", "weight", "blood", "heart", "case", "date", "birthday", "height");
 $extension = ".jpg";
+
 
 $values = array();
 
@@ -42,31 +47,31 @@ foreach ($filenames as $file)
   <form action="verify.php" method="post">
 
     <?php displayImage("name"); ?>
-    Name: <input type="text" name="name" value=<?php displayText("name");?>><br />
+    Name: <input type="text" name="name" value=<?php displayText("name", $values);?>><br />
 
     <?php displayImage("phone"); ?><br />
-    Phone number: <input type="text" name="phone" value=<?php displayText("name");?>><br />
+    Phone number: <input type="text" name="phone" value=<?php displayText("phone", $values);?>><br />
 
     <?php displayImage("birthday"); ?><br />
-    Birthday (dd|mm|yy): <input type="text" name="birthday" value=<?php displayText("name");?>><br />
+    Birthday (dd|mm|yy): <input type="text" name="birthday" value=<?php displayText("birthday", $values);?>><br />
 
     <?php displayImage("village"); ?><br />
-    Sub-location: <input type="text" name="sublocation" value=<?php displayText("name");?>><br />
+    Sub-location: <input type="text" name="sublocation" value=<?php displayText("village", $values);?>><br />
 
     <?php displayImage("weight"); ?><br />
-    Weight <input type="text" name="weight" value=<?php displayText("name");?>><br />
+    Weight <input type="text" name="weight" value=<?php displayText("weight", $values);?>><br />
 
     <?php displayImage("height"); ?><br />
-    Height <input type="text" name="height" value=<?php displayText("name");?>><br />
+    Height <input type="text" name="height" value=<?php displayText("height", $values);?>><br />
 
     <?php displayImage("bmi"); ?><br />
-    BMI <input type="text" name="bmi" value=<?php displayText("name");?>><br />
+    BMI <input type="text" name="bmi" value=<?php displayText("bmi", $values);?>><br />
 
     <?php displayImage("blood"); ?><br />
-    Blood Pressure <input type="text" name="systolic" value=<?php displayText("name");?>><br /><!-- / <input type="text" name="diastolic"><br /> -->
+    Blood Pressure <input type="text" name="systolic" value=<?php displayText("blood", $values);?>><br /><!-- / <input type="text" name="diastolic"><br /> -->
 
     <?php displayImage("heart"); ?><br />
-    Heart Rate <intput type="text" name="heartrate" value=<?php displayText("name");?>><br />
+    Heart Rate <intput type="text" name="heartrate" value=<?php displayText("heart", $values);?>><br />
 
     <input type="submit">
   </form>
