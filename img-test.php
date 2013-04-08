@@ -25,8 +25,8 @@
 		
 		# This should probably be changed so that it utilizes an array.
 		$nameField = $image->clone();
-        $nameField->cropImage(900, 40, 290, 140);
-		
+                $nameField->cropImage(900, 40, 290, 140);
+
 		$bmiField = $image->clone();
 		$bmiField->cropImage(60, 40, 795, 415);
 		

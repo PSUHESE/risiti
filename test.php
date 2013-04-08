@@ -71,7 +71,7 @@ foreach ($filenames as $file)
     Blood Pressure <input type="text" name="blood" value=<?php displayText("blood", $values);?>><br /><!-- / <input type="text" name="diastolic"><br /> -->
 
     <?php displayImage("heart"); ?><br />
-    Heart Rate <intput type="text" name="heart" value=<?php displayText("heart", $values);?>>><br />
+    Heart Rate <input type="text" name="heart" value=<?php displayText("heart", $values);?>><br />
 
     <input type="submit">
   </form>
