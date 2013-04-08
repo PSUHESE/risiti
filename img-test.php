@@ -96,7 +96,7 @@
 			$data = $heightField->getImageBlob();
 			file_put_contents($dateStr . "/height.jpg", $data);
 		}
-                else{
+    else{
 			die('Failed to create output folder...');
 		}
 		header("Content-type: image/jpeg");
