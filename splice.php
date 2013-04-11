@@ -1,6 +1,6 @@
 <?php
 
-  $path = htmlspecialchars($_POST['path']);
+    $path = htmlspecialchars($_POST['path']);
 	
 	session_start();
 	
@@ -125,7 +125,7 @@
 		}
 		
 		# Save each image into the directory in question.
-		$dateStr = date('D,d-M-Y-H:$i:s');
+		$dateStr = date('dMY-H-i-s');
 		
 		if (mkdir($dateStr, 0777, true))
 		{
