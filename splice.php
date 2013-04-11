@@ -25,6 +25,9 @@
 		    $image = new Imagick($path);
 		}
 		
+		// resize the image so it matches the appropriate dimensions
+		$image->resizeImage(1240, 560, FILTER_UNDEFINED, 0.5);
+		
 		# This should probably be changed so that it utilizes an array.
 		$blockWidth = 28;
 		$blockHeight = 36;
