@@ -44,159 +44,159 @@
 		
 		
 		// create the boxes for the name segments
-		for (int i = 0; i < 30: i++) 
+		for ($i = 0; $i < 30: $i++) 
 		{
-		    $nameParts[i] = $image->clone();
-			$nameParts[i]->cropImage(28, 36, 296+(i*$blockSkip), 144);
+		    $nameParts[$i] = $image->clone();
+			$nameParts[$i]->cropImage($blockWidth, $blockHeight, 296+($i*$blockSkip), 144);
 		}
 		
 		// create the boxes for the bmi segments
-        for (int i = 0; i < 2; i++)
+        for ($i = 0; $i < 2; $i++)
 		{
-		    $bmiParts[i] = $image->clone();
-			$bmiParts[i]->cropImage(28,36,798+(i*$blockSkip), 419);
+		    $bmiParts[$i] = $image->clone();
+			$bmiParts[$i]->cropImage($blockWidth ,$blockHeight,798+($i*$blockSkip), 419);
 		}
 
         // create the boxes for the phone number segments
-		for (int i = 0; i < 10; i++)
+		for ($i = 0; $i < 10; $i++)
 		{
-		    $phoneParts[i] = $image->clone();
-		    $phoneParts[i]->cropImage(28, 36, 296+(i*$blockSkip), 210);
+		    $phoneParts[$i] = $image->clone();
+		    $phoneParts[$i]->cropImage($blockWidth, $blockHeight, 296+($i*$blockSkip), 210);
 		}
 		
 		// create the boxes for the village segments
-		for (int i = 0; i < 30; i++)
+		for ($i = 0; $i < 30; $i++)
 		{
-		    $villageParts[i] = $image->clone();
-		    $villageParts[i]->cropImage(28, 36, 296+(i*$blockSkip), 349);
+		    $villageParts[$i] = $image->clone();
+		    $villageParts[$i]->cropImage($blockWidth, $blockHeight, 296+($i*$blockSkip), 349);
 		}
 		
 		// create the boxes for the weight segments
-		for (int i = 0; i < 3; i++)
+		for ($i = 0; $i < 3; $i++)
 		{
-		    $weightParts[i] = $image->clone();
-		    $weightParts[i]->cropImage(28, 36, 296+(i*$blockSkip), 419);
+		    $weightParts[$i] = $image->clone();
+		    $weightParts[$i]->cropImage($blockWidth, $blockHeight, 296+($i*$blockSkip), 419);
 		}
 		
 		
 	    // create the boxes for the upper blood pressure segments
-		for (int i = 0; i < 3; i++)
+		for ($i = 0; $i < 3; $i++)
 		{
-		    $bpOverParts[i] = $image->clone();
-		    $bpOverParts[i]->cropImage(28, 36, 298+(i*$blockSkip), 488);
+		    $bpOverParts[$i] = $image->clone();
+		    $bpOverParts[$i]->cropImage($blockWidth, $blockHeight, 298+($i*$blockSkip), 488);
 		}
 		
 		// create the boxes for the lower blood pressure segments
-		for (int i = 0; i < 3; i++)
+		for ($i = 0; $i < 3; $i++)
 		{
-		   $bpUnderParts[i] = $image->clone();
-		   $bpUnderParts[i]->cropImage(28, 36, 414+(i*$blockSkip), 488);
+		   $bpUnderParts[$i] = $image->clone();
+		   $bpUnderParts[$i]->cropImage($blockWidth, $blockHeight, 414+($i*$blockSkip), 488);
 		}
 		
         // create the boxes for the heart rate segments
-		for (int i = 0; i < 3; i++)
+		for ($i = 0; $i < 3; $i++)
 		{
-		   $hrParts[i] = $image->clone();
-		   $hrParts[i]->cropImage(28, 36, 650+(i*$blockSkip), 489);
+		   $hrParts[$i] = $image->clone();
+		   $hrParts[$i]->cropImage($blockWidth, $blockHeight, 650+($i*$blockSkip), 489);
 		}
 		
 	    // create the boxes for the height segments
-		for (int i = 0; i < 3; i++)
+		for ($i = 0; $i < 3; $i++)
 		{
-		   $heightParts[i] = $image->clone();
-		   $heightParts[i]->cropImage(28, 36, 650+(i*$blockSkip), 419);
+		   $heightParts[$i] = $image->clone();
+		   $heightParts[$i]->cropImage($blockWidth, $blockHeight, 650+($i*$blockSkip), 419);
 		}
 		
 		$caseField = $image->clone();
 		$caseField->cropImage(250, 60, 995, 20);
 		
 		// create the boxes for the date segments
-		for (int i = 0; i < 6; i++)
+		for ($i = 0; $i < 6; $i++)
 		{
-		   $dateParts[i] = $image->clone();
-		   $dateParts[i]->cropImage(28, 36, 1008+(i*$blockSkip), 419);
+		   $dateParts[$i] = $image->clone();
+		   $dateParts[$i]->cropImage($blockWidth, $blockHeight, 1008+($i*$blockSkip), 419);
 		}
 		
 		// create the boxes for the birthdate segments
-		for (int i = 0; i < 6; i++)
+		for ($i = 0; $i < 6; $i++)
 		{
-		   $bdParts[i] = $image->clone();
-		   $bdParts[i]->cropImage(28, 36, 1008+(i*$blockSkip), 212);
+		   $bdParts[$i] = $image->clone();
+		   $bdParts[$i]->cropImage($blockWidth, $blockHeight, 1008+($i*$blockSkip), 212);
 		}
 		
 		# Save each image into the directory in question.
-		$dateStr = date('D,d-M-Y-H:i:s');
+		$dateStr = date('D,d-M-Y-H:$i:s');
 		
 		if (mkdir($dateStr, 0777, true))
 		{
 			# But actually, arrays and stuff
-			for (int i = 0; i < count($nameParts); i++)
+			for ($i = 0; $i < count($nameParts); $i++)
 			{
-			    $data = $nameParts[i]->getImageBlob();
-			    file_put_contents($dateStr . "/name".i.".jpg", $data);
+			    $data = $nameParts[$i]->getImageBlob();
+			    file_put_contents($dateStr . "/name".$i.".jpg", $data);
 			}
 			
-			for (int i = 0; i < count($bmiParts); i++)
+			for ($i = 0; $i < count($bmiParts); $i++)
 			{
-			    $data = $bmiParts[i]->getImageBlob();
-			    file_put_contents($dateStr . "/bmi".i.".jpg", $data);
+			    $data = $bmiParts[$i]->getImageBlob();
+			    file_put_contents($dateStr . "/bmi".$i.".jpg", $data);
 			}
 			
-			for (int i = 0; i < count($phoneParts); i++)
+			for ($i = 0; $i < count($phoneParts); $i++)
 			{
-			    $data = $phoneParts[i]->getImageBlob();
-			    file_put_contents($dateStr . "/phone".i.".jpg", $data);
+			    $data = $phoneParts[$i]->getImageBlob();
+			    file_put_contents($dateStr . "/phone".$i.".jpg", $data);
 			}
 			
-			for (int i = 0; i < count($villageParts); i++)
+			for ($i = 0; $i < count($villageParts); $i++)
 			{
-			    $data = $villageParts[i]->getImageBlob();
-			    file_put_contents($dateStr . "/village".i.".jpg", $data);
+			    $data = $villageParts[$i]->getImageBlob();
+			    file_put_contents($dateStr . "/village".$i.".jpg", $data);
 			}
 			
-			for (int i = 0; i < count($weightParts); i++)
+			for ($i = 0; $i < count($weightParts); $i++)
 			{
-			    $data = $weightParts[i]->getImageBlob();
-			    file_put_contents($dateStr . "/weight".i.".jpg", $data);
+			    $data = $weightParts[$i]->getImageBlob();
+			    file_put_contents($dateStr . "/weight".$i.".jpg", $data);
 			}
 			
-			for (int i = 0; i < count($bpOverParts); i++)
+			for ($i = 0; $i < count($bpOverParts); $i++)
 			{
-			    $data = $bpOverParts[i]->getImageBlob();
-			    file_put_contents($dateStr . "/bloodOver".i.".jpg", $data);
+			    $data = $bpOverParts[$i]->getImageBlob();
+			    file_put_contents($dateStr . "/bloodOver".$i.".jpg", $data);
 			}
 			
-			for (int i = 0; i < count($bpUnderParts); i++)
+			for ($i = 0; $i < count($bpUnderParts); $i++)
 			{
-			    $data = $bpUnderParts[i]->getImageBlob();
-			    file_put_contents($dateStr . "/bloodUnder".i.".jpg", $data);
+			    $data = $bpUnderParts[$i]->getImageBlob();
+			    file_put_contents($dateStr . "/bloodUnder".$i.".jpg", $data);
 			}
 			
-			for (int i = 0; i < count($hrParts); i++)
+			for ($i = 0; $i < count($hrParts); $i++)
 			{
-			    $data = $hrParts[i]->getImageBlob();
-			    file_put_contents($dateStr . "/heart".i.".jpg", $data);
+			    $data = $hrParts[$i]->getImageBlob();
+			    file_put_contents($dateStr . "/heart".$i.".jpg", $data);
 			}
 			
 			$data = $caseField->getImageBlob();
 			file_put_contents($dateStr . "/case.jpg", $data);
 			
-			for (int i = 0; i < count($dateParts); i++)
+			for ($i = 0; $i < count($dateParts); $i++)
 			{
-			    $data = $dateParts[i]->getImageBlob();
-			    file_put_contents($dateStr . "/date".i.".jpg", $data);
+			    $data = $dateParts[$i]->getImageBlob();
+			    file_put_contents($dateStr . "/date".$i.".jpg", $data);
 			}
 			
-			for (int i = 0; i < count($bdParts); i++)
+			for ($i = 0; $i < count($bdParts); $i++)
 			{
-			    $data = $bdParts[i]->getImageBlob();
-			    file_put_contents($dateStr . "/birthday".i.".jpg", $data);
+			    $data = $bdParts[$i]->getImageBlob();
+			    file_put_contents($dateStr . "/birthday".$i.".jpg", $data);
 			}
 			
-			for (int i = 0; i < count($heightParts); i++)
+			for ($i = 0; $i < count($heightParts); $i++)
 			{
-			    $data = $heightParts[i]->getImageBlob();
-			    file_put_contents($dateStr . "/height".i.".jpg", $data);
+			    $data = $heightParts[$i]->getImageBlob();
+			    file_put_contents($dateStr . "/height".$i.".jpg", $data);
 			}
 		}
     else{
