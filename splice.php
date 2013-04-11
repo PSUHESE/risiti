@@ -46,35 +46,35 @@
 		// create the boxes for the name segments
 		for ($i = 0; $i < 30; $i++) 
 		{
-		    $nameParts[$i] = clone $image();
+		    $nameParts[$i] = clone $image;
 			$nameParts[$i]->cropImage($blockWidth, $blockHeight, 296+($i*$blockSkip), 144);
 		}
 		
 		// create the boxes for the bmi segments
         for ($i = 0; $i < 2; $i++)
 		{
-		    $bmiParts[$i] = clone $image();
+		    $bmiParts[$i] = clone $image;
 			$bmiParts[$i]->cropImage($blockWidth ,$blockHeight,798+($i*$blockSkip), 419);
 		}
 
         // create the boxes for the phone number segments
 		for ($i = 0; $i < 10; $i++)
 		{
-		    $phoneParts[$i] = clone $image();
+		    $phoneParts[$i] = clone $image;
 		    $phoneParts[$i]->cropImage($blockWidth, $blockHeight, 296+($i*$blockSkip), 210);
 		}
 		
 		// create the boxes for the village segments
 		for ($i = 0; $i < 30; $i++)
 		{
-		    $villageParts[$i] = clone $image();
+		    $villageParts[$i] = clone $image;
 		    $villageParts[$i]->cropImage($blockWidth, $blockHeight, 296+($i*$blockSkip), 349);
 		}
 		
 		// create the boxes for the weight segments
 		for ($i = 0; $i < 3; $i++)
 		{
-		    $weightParts[$i] = clone $image();
+		    $weightParts[$i] = clone $image;
 		    $weightParts[$i]->cropImage($blockWidth, $blockHeight, 296+($i*$blockSkip), 419);
 		}
 		
@@ -82,45 +82,45 @@
 	    // create the boxes for the upper blood pressure segments
 		for ($i = 0; $i < 3; $i++)
 		{
-		    $bpOverParts[$i] = clone $image();
+		    $bpOverParts[$i] = clone $image;
 		    $bpOverParts[$i]->cropImage($blockWidth, $blockHeight, 298+($i*$blockSkip), 488);
 		}
 		
 		// create the boxes for the lower blood pressure segments
 		for ($i = 0; $i < 3; $i++)
 		{
-		   $bpUnderParts[$i] = clone $image();
+		   $bpUnderParts[$i] = clone $image;
 		   $bpUnderParts[$i]->cropImage($blockWidth, $blockHeight, 414+($i*$blockSkip), 488);
 		}
 		
         // create the boxes for the heart rate segments
 		for ($i = 0; $i < 3; $i++)
 		{
-		   $hrParts[$i] = clone $image();
+		   $hrParts[$i] = clone $image;
 		   $hrParts[$i]->cropImage($blockWidth, $blockHeight, 650+($i*$blockSkip), 489);
 		}
 		
 	    // create the boxes for the height segments
 		for ($i = 0; $i < 3; $i++)
 		{
-		   $heightParts[$i] = clone $image();
+		   $heightParts[$i] = clone $image;
 		   $heightParts[$i]->cropImage($blockWidth, $blockHeight, 650+($i*$blockSkip), 419);
 		}
 		
-		$caseField = clone $image();
+		$caseField = clone $image;
 		$caseField->cropImage(250, 60, 995, 20);
 		
 		// create the boxes for the date segments
 		for ($i = 0; $i < 6; $i++)
 		{
-		   $dateParts[$i] = clone $image();
+		   $dateParts[$i] = clone $image;
 		   $dateParts[$i]->cropImage($blockWidth, $blockHeight, 1008+($i*$blockSkip), 419);
 		}
 		
 		// create the boxes for the birthdate segments
 		for ($i = 0; $i < 6; $i++)
 		{
-		   $bdParts[$i] = clone $image();
+		   $bdParts[$i] = clone $image;
 		   $bdParts[$i]->cropImage($blockWidth, $blockHeight, 1008+($i*$blockSkip), 212);
 		}
 		
