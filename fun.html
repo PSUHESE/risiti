@@ -1,12 +1,19 @@
 <html>
   <head>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
     <script>
-     $('#phpdiv').load('fun.php');
+    $(document).ready(function() {
+      $( "#progressbar" ).progressbar({
+        value: false
+       });
+       $('#phpdiv').load('test.php');
+     });
      </script>
   </head>
   <body>
-    Part of fun.html
-    <div id="phpdiv"></div>  
+    This is where the form will post
+    <div id="phpdiv"><div id="progressbar"></div></div>  
   </body>
 </html>

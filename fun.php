@@ -1,4 +1,4 @@
 <?php
- // sleep(2);
-  echo "Woo!";
+ sleep(2);
+ echo "Woo!";
 ?>
