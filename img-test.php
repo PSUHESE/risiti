@@ -1,6 +1,8 @@
 <?php
 
-    $path = htmlspecialchars($_POST['path']);
+  $path = htmlspecialchars($_POST['path']);
+	
+	session_start();
 	
 	# this did some validation, but I changed it for testing purposes
 	if (true) {
@@ -99,9 +101,12 @@
     else{
 			die('Failed to create output folder...');
 		}
+
+		$_SESSION['folder'] = $dateStr;
+
 		header("Content-type: image/jpeg");
 	    echo $image;
 	}
-	}
+}
 	
 ?>
