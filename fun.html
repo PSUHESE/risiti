@@ -1,8 +1,16 @@
 <html>
   <head>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
     <script>
       $('#phpdiv').load('fun.php');
+    $(document).ready(function() {
+      $( "#progressbar" ).progressbar({
+        value: false
+       });
+       $('#phpdiv').load('test.php');
+     });
      </script>
      <style type="text/css">
      body {
@@ -17,6 +25,6 @@
     <h1>Mashavu Risiti</h1>
     <h3>Verify each form field matches what's in the picture</h3>
     <h3>Then click submit</h3>
-    <div id="phpdiv">Form should load here...</div>  
+    <div id="phpdiv">Form should load here...</div>
   </body>
 </html>
