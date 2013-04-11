@@ -44,7 +44,7 @@
 		
 		
 		// create the boxes for the name segments
-		for ($i = 0; $i < 30: $i++) 
+		for ($i = 0; $i < 30; $i++) 
 		{
 		    $nameParts[$i] = $image->clone();
 			$nameParts[$i]->cropImage($blockWidth, $blockHeight, 296+($i*$blockSkip), 144);
