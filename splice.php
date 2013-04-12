@@ -31,7 +31,7 @@
 		# This should probably be changed so that it utilizes an array.
 		$blockWidth = 27;
 		$blockHeight = 34;
-		$blockSkip = 2.4;
+		$blockSkip = 2.5;
 		
 		$nameParts = array();
 		$bmiParts = array();
