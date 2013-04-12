@@ -29,8 +29,8 @@
 		$image->resizeImage(1240, 560, FILTER_UNDEFINED, 0.5);
 		
 		# This should probably be changed so that it utilizes an array.
-		$blockWidth = 27;
-		$blockHeight = 36;
+		$blockWidth = 28;
+		$blockHeight = 34;
 		$blockSkip = 2;
 		
 		$nameParts = array();
