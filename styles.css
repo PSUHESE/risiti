@@ -1,9 +1,9 @@
 body {
-    background: #EEE;
+    background: #FAFAFA;
 }
 
 body img {
-    box-shadow: 10px 10px 5px 5px #333;
+    box-shadow: 5px 5px 2px 1px #888;
 	border: 1px solid;
 	border-radius: 2px;
     float: right;	
