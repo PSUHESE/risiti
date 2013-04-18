@@ -1,5 +1,7 @@
 body {
-    background: #FAFAFA;
+    background: #FDFDFD;
+	margin:0;
+    padding:0;
 }
 
 body img {
@@ -8,6 +10,7 @@ body img {
 	border: 1px solid;
 	border-radius: 2px;
     float: right;	
+	vertical-align: middle;
 }
 
 body #text {
