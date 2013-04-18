@@ -7,7 +7,7 @@ body img {
 	margin: 10px;
 	border: 1px solid;
 	border-radius: 2px;
-    float: center;	
+    float: right;	
 }
 
 body #text {
@@ -16,7 +16,7 @@ body #text {
 }
 
 body input {
-    border: 2px solid #66CD00;
+    border: 1px solid #66CD00;
 	border-radius: 2px;
 	box-shadow; 0px 0px 10px #66CD00, inset 0px 0px 5px #66CD00;
 	
