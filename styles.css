@@ -1,0 +1,14 @@
+body {
+    background: #EEE;
+}
+
+body img {
+    box-shadow: 10px 10px 5px 5px #333;
+	border: 1px solid;
+	border-radius: 2px;
+    float: right;	
+}
+
+body #text {
+    float: left;
+}

@@ -26,7 +26,7 @@ function displayText($name, $values)
   if (is_null($values[$name]))
     echo "\"\"";
   else
-    echo "\"" . $values[$name] . "\"";
+    echo "<div class=\"text\">\"" . $values[$name] . "\"</div>";
 }
 
 $folder = "./testDump";
