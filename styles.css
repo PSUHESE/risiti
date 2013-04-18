@@ -3,12 +3,21 @@ body {
 }
 
 body img {
-    box-shadow: 5px 5px 2px 1px #888;
+    box-shadow: 5px 5px 5px 0px #888;
+	margin: 5px;
 	border: 1px solid;
 	border-radius: 2px;
     float: right;	
 }
 
 body #text {
+    margin: 5px;
     float: left;
+}
+
+body input {
+    border: 1px solid #66CD00;
+	border-radius: 2px;
+	box-shadow; 0px 0px 5px #66CD00, inset 0px 0px 2px #66CD00;
+	
 }
