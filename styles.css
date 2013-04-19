@@ -1,0 +1,25 @@
+body {
+    background: #FDFDFD;
+	margin:0;
+    padding:0;
+}
+
+body img {
+    box-shadow: 5px 5px 5px 0px #888;
+	border: 1px solid;
+	border-radius: 2px;
+    float: right;	
+	vertical-align: middle;
+}
+
+body #text {
+    margin: 5px;
+    float: left;
+}
+
+body input {
+    border: 1px solid #66CD00;
+	border-radius: 2px;
+	box-shadow; 0px 0px 10px #66CD00, inset 0px 0px 5px #66CD00;
+	
+}

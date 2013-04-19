@@ -47,7 +47,7 @@ foreach ($filenames as $file)
   <form action="export.php" method="post">
 
     <?php displayImage("name"); ?>
-    Name: <input type="text" name="name" value=<?php displayText("name", $values);?>><br />
+    <div class="text">Name: <input type="text" name="name" value=<?php displayText("name", $values);?>><br />
 
     <?php displayImage("phone"); ?><br />
     Phone number: <input type="text" name="phone" value=<?php displayText("phone", $values);?>><br />
@@ -71,7 +71,7 @@ foreach ($filenames as $file)
     Blood Pressure <input type="text" name="blood" value=<?php displayText("blood", $values);?>><br /><!-- / <input type="text" name="diastolic"><br /> -->
 
     <?php displayImage("heart"); ?><br />
-    Heart Rate <input type="text" name="heart" value=<?php displayText("heart", $values);?>><br />
+    Heart Rate <input type="text" name="heart" value=<?php displayText("heart", $values);?>><br /></div>
 
     <input type="submit">
   </form>
