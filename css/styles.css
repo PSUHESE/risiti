@@ -8,7 +8,7 @@ body img {
 	border: 1px solid;
 	border-radius: 2px;
     float: right;	
-	vertical-align: middle;
+	vertical-align: top;
 }
 
 body .text {
