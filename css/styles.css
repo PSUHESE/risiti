@@ -20,6 +20,10 @@ body .pair {
     margin: 15px;
 }
 
+body form div span {
+    float: left;
+}
+
 body button {
     margin-left: 20px;
 }
