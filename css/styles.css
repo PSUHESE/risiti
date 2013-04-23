@@ -11,11 +11,11 @@ body img {
 	vertical-align: middle;
 }
 
-body #text {
+body .text {
     margin: 5px;
     float: left;
 }
 
-body #pair {
+body .pair {
     margin: 15px;
 }
