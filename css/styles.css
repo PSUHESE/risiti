@@ -13,12 +13,14 @@ div .image img {
 
 div .image {
 	float: right;
+	width: 60%;
 }
 
 div .text {
     float: left;
 	width: 30%;
 	margin: auto;
+	margin-top: 14px;
 }
 
 div .text span {
