@@ -15,3 +15,7 @@ body #text {
     margin: 5px;
     float: left;
 }
+
+body #pair {
+    margin: 15px;
+}

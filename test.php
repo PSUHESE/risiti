@@ -47,33 +47,33 @@ foreach ($filenames as $file)
   <form action="export.php" method="post">
 
     <?php displayImage("name"); ?>
-    <span class="help-inline">Name:</span> <input type="text" name="name" value=<?php displayText("name", $values);?>><br />
+    <div class="pair"><span class="help-inline">Name:</span> <input type="text" name="name" value=<?php displayText("name", $values);?>><br /></div>
 
     <?php displayImage("phone"); ?><br />
-    <span class="help-inline">Phone number:</span> <input type="text" name="phone" value=<?php displayText("phone", $values);?>><br />
+    <div class="pair"><span class="help-inline">Phone number:</span> <input type="text" name="phone" value=<?php displayText("phone", $values);?>><br /></div>
 
     <?php displayImage("birthday"); ?><br />
-    <span class="help-inline">Birthday (dd|mm|yy):</span> <input type="text" name="birthday" value=<?php displayText("birthday", $values);?>><br />
+    <div class="pair"><span class="help-inline">Birthday (dd|mm|yy):</span> <input type="text" name="birthday" value=<?php displayText("birthday", $values);?>><br /></div>
 
     <?php displayImage("village"); ?><br />
-    <span class="help-inline">Sub-location:</span> <input type="text" name="village" value=<?php displayText("village", $values);?>><br />
+    <div class="pair"><span class="help-inline">Sub-location:</span> <input type="text" name="village" value=<?php displayText("village", $values);?>><br /></div>
 
     <?php displayImage("weight"); ?><br />
-    <span class="help-inline">Weight</span> <input type="text" name="weight" value=<?php displayText("weight", $values);?>><br />
+    <div class="pair"><span class="help-inline">Weight</span> <input type="text" name="weight" value=<?php displayText("weight", $values);?>><br /></div>
 
     <?php displayImage("height"); ?><br />
-    <span class="help-inline">Height</span> <input type="text" name="height" value=<?php displayText("height", $values);?>><br />
+    <div class="pair"><span class="help-inline">Height</span> <input type="text" name="height" value=<?php displayText("height", $values);?>><br /></div>
 
     <?php displayImage("bmi"); ?><br />
-    <span class="help-inline">BMI</span><input type="text" name="bmi" value=<?php displayText("bmi", $values);?>><br />
+    <div class="pair"><span class="help-inline">BMI</span><input type="text" name="bmi" value=<?php displayText("bmi", $values);?>><br /></div>
 
     <?php displayImage("blood"); ?><br />
-    <span class="help-inline">Blood Pressure</span><input type="text" name="blood" value=<?php displayText("blood", $values);?>><br /><!-- / <input type="text" name="diastolic"><br /> -->
+    <div class="pair"><span class="help-inline">Blood Pressure</span><input type="text" name="blood" value=<?php displayText("blood", $values);?>><br /></div><!-- / <input type="text" name="diastolic"><br /> -->
 
     <?php displayImage("heart"); ?><br />
-    <span class="help-inline">Heart Rate</span><input type="text" name="heart" value=<?php displayText("heart", $values);?>><br />
+    <div class="pair"><span class="help-inline">Heart Rate</span><input type="text" name="heart" value=<?php displayText("heart", $values);?>><br /></div>
 
-    <input type="submit">
+    <button class="btn btn-success" type="submit">
   </form>
 </body>
 </html>
