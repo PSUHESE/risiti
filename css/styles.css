@@ -7,7 +7,7 @@ body img {
     box-shadow: 5px 5px 5px 0px #888;
 	border: 1px solid;
 	border-radius: 2px;
-    float: center;	
+    float: right;	
 	vertical-align: top;
 }
 
@@ -18,10 +18,6 @@ body .text {
 
 body .pair {
     margin: 15px;
-}
-
-body form {
-    float: left;
 }
 
 body button {
