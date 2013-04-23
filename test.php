@@ -83,7 +83,7 @@ foreach ($filenames as $file)
     <?php displayImage("heart"); ?><br />
     <span class="help-inline">Heart Rate</span><input type="text" name="heart" value=<?php displayText("heart", $values);?>><br /></div>
 
-    <button class="btn btn-success" type="submit">
+    <button class="btn btn-success" type="submit">Submit</button>
   </form>
 </body>
 </html>
