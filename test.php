@@ -43,7 +43,6 @@ foreach ($filenames as $file)
 ?>
 <html>
 <body>
-  <h1> Mashavu Risiti </h1>
   <form action="export.php" method="post">
 
     <div class="controls controls-row">

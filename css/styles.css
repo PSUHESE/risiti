@@ -19,3 +19,7 @@ body .text {
 body .pair {
     margin: 15px;
 }
+
+body button {
+    margin-left: 20px;
+}
