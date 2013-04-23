@@ -3,17 +3,23 @@ body {
     padding:0;
 }
 
-body img {
+div .image img {
     box-shadow: 5px 5px 5px 0px #888;
 	border: 1px solid;
 	border-radius: 2px;
-    float: right;	
+    float: left;	
 	vertical-align: top;
 }
 
-body .text {
-    margin: 5px;
+div .image {
+    width: 50%;
+	float: center;
+}
+
+div .text {
     float: left;
+	width: 50%;
+	margin: auto;
 }
 
 body .pair {
