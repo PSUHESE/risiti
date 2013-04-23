@@ -15,7 +15,7 @@ function displayImage($image)
 {
   $folder = "./testDump";
   $extension = ".jpg";
-  echo "<img src=\"" . $folder . DIRECTORY_SEPARATOR . $image . $extension . "\"/><hr />";
+  echo "<img src=\"" . $folder . DIRECTORY_SEPARATOR . $image . $extension . "\"/><br />";
 }
 
 function displayText($name, $values)
