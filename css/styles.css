@@ -25,6 +25,7 @@ div .text {
 
 div .text span {
 	float: left;
+	width: 30%;
 }
 
 div .text input {
