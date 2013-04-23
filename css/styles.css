@@ -29,7 +29,7 @@ div .text span {
 }
 
 div .text input {
-	float: right;
+	width: 65%;
 }
 
 body .pair {
