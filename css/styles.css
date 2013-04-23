@@ -12,14 +12,21 @@ div .image img {
 }
 
 div .image {
-    width: 50%;
-	float: center;
+	float: right;
 }
 
 div .text {
     float: left;
-	width: 50%;
+	width: 30%;
 	margin: auto;
+}
+
+div .text span {
+	float: left;
+}
+
+div .text input {
+	float: right;
 }
 
 body .pair {
