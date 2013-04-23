@@ -47,31 +47,31 @@ foreach ($filenames as $file)
   <form action="export.php" method="post">
 
     <?php displayImage("name"); ?>
-    <div class="text">Name: <input type="text" name="name" value=<?php displayText("name", $values);?>><br />
+    <div class="text">Name: <input type="text" name="name" id="inputSuccess" value=<?php displayText("name", $values);?>><br />
 
     <?php displayImage("phone"); ?><br />
-    Phone number: <input type="text" name="phone" value=<?php displayText("phone", $values);?>><br />
+    Phone number: <input type="text" name="phone" id="inputSuccess" value=<?php displayText("phone", $values);?>><br />
 
     <?php displayImage("birthday"); ?><br />
-    Birthday (dd|mm|yy): <input type="text" name="birthday" value=<?php displayText("birthday", $values);?>><br />
+    Birthday (dd|mm|yy): <input type="text" name="birthday" id="inputSuccess" value=<?php displayText("birthday", $values);?>><br />
 
     <?php displayImage("village"); ?><br />
-    Sub-location: <input type="text" name="village" value=<?php displayText("village", $values);?>><br />
+    Sub-location: <input type="text" name="village" id="inputSuccess" value=<?php displayText("village", $values);?>><br />
 
     <?php displayImage("weight"); ?><br />
-    Weight <input type="text" name="weight" value=<?php displayText("weight", $values);?>><br />
+    Weight <input type="text" name="weight" id="inputSuccess" value=<?php displayText("weight", $values);?>><br />
 
     <?php displayImage("height"); ?><br />
-    Height <input type="text" name="height" value=<?php displayText("height", $values);?>><br />
+    Height <input type="text" name="height" id="inputSuccess" value=<?php displayText("height", $values);?>><br />
 
     <?php displayImage("bmi"); ?><br />
-    BMI <input type="text" name="bmi" value=<?php displayText("bmi", $values);?>><br />
+    BMI <input type="text" name="bmi" id="inputSuccess" value=<?php displayText("bmi", $values);?>><br />
 
     <?php displayImage("blood"); ?><br />
-    Blood Pressure <input type="text" name="blood" value=<?php displayText("blood", $values);?>><br /><!-- / <input type="text" name="diastolic"><br /> -->
+    Blood Pressure <input type="text" name="blood" id="inputSuccess" value=<?php displayText("blood", $values);?>><br /><!-- / <input type="text" name="diastolic"><br /> -->
 
     <?php displayImage("heart"); ?><br />
-    Heart Rate <input type="text" name="heart" value=<?php displayText("heart", $values);?>><br /></div>
+    Heart Rate <input type="text" name="heart" id="inputSuccess" value=<?php displayText("heart", $values);?>><br /></div>
 
     <input type="submit">
   </form>
