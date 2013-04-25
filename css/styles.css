@@ -1,25 +1,37 @@
 body {
-	margin:10px;
+	margin:0;
     padding:0;
+	padding-left:10px;
+}
+
+form {
+    margin:10px;
+   	border: 1px solid #ccc;
+	border-radius: 8px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 div .image img {
     box-shadow: 5px 5px 5px 0px #888;
 	border: 1px solid;
 	border-radius: 2px;
-    float: left;	
-	vertical-align: top;
 }
 
 div .image {
-	float: right;
-	width: 60%;
+    vertical-align: bottom; 
+	margin-left: 30%;
+}
+
+div .navbar {
+    margin: 0px !important;
 }
 
 div .text {
     float: left;
-	width: 30%;
+	width: 100%;
 	margin: auto;
+	vertical-align: top;
 	margin-top: 14px;
 }
 
