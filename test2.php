@@ -4,7 +4,7 @@
 function callTess($inputImage, $outputFileName)
 {
   $output = array();
-  $command = "/usr/bin/tesseract " . $inputImage . " " . $outputFileName . " -psm 8 characters 2>&1";
+  $command = "/usr/bin/tesseract " . $inputImage . " " . $outputFileName . " -psm 10 characters 2>&1";
 
   exec($command, $output);
   $contents = file_get_contents($outputFileName . ".txt");
@@ -30,7 +30,7 @@ function displayText($name, $values)
 }
 
 $folder = "./testDump";
-$filenames = array("name", "bmi", "phone", "village", "weight", "blood", "heart", "case", "date", "birthday", "height");
+$filenames = array("name", "bmi", "phone", "village", "weight", "bloodOver", "bloodUnder", "heart", "case", "date", "birthday", "height");
 $charnums = array("birthday" => 5, "bloodOver" =>2, "bloodUnder" => 2 ,"bmi" => 1, "case" => 0, "date" => 5, "heart" => 2, "height" =>2, "name" => 29, "phone" =>9, "village" => 29, "weight" =>2);
 $extension = ".jpg";
 
@@ -45,22 +45,25 @@ foreach ($filenames as $file)
   {
       $values[$file . $i] = callTess($folder . DIRECTORY_SEPARATOR . $file . $i . $extension, $file);
   }
-
+}
 /*
  * Concatentate each character into strings
  */
 $formStrings = array();
+foreach ($filenames as $file)
+{
+  $formStrings[$file] = "";
+}
+//var_dump($formStrings);
 foreach($filenames as $file)
 {
   for($i = 0; $i <= $charnums[$file]; $i++)
   {
     if ($values[$file . $i] != " ")
-      $formStrings[$file] =
-
+	$formStrings[$file] = $formStrings[$file] . $values[$file . $i];
   }
 }
-  var_dump($values);
-}
+ // var_dump($values);
 ?>
 <html>
 <body>
@@ -89,7 +92,7 @@ foreach($filenames as $file)
     BMI <input type="text" name="bmi" value=<?php displayText("bmi", $formStrings);?>><br />
 
     <?php displayImage("blood"); ?><br />
-    Blood Pressure <input type="text" name="blood" value=<?php displayText("blood", $formStrings);?>><br /><!-- / <input type="text" name="diastolic"><br /> -->
+    Blood Pressure <input type="text" name="blood" value=<?php displayText("bloodOver", $formStrings);?>><br /><!-- / <input type="text" name="diastolic"><br /> -->
 
     <?php displayImage("heart"); ?><br />
     Heart Rate <input type="text" name="heart" value=<?php displayText("heart", $formStrings);?>><br />
