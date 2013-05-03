@@ -38,10 +38,11 @@ document.querySelector('#file').addEventListener('change', function(e) {
       image.src = resp.dataUrl;
       document.body.appendChild(image);
     };
-	  document.getElementById('upload-p').style.display = 'block';
   };
  
   xhr.send(fd);
+  	  	  document.getElementById('upload-progress').style.display = 'none';
+  	  document.getElementById('upload-p').style.display = 'block';
 
 }, false);
 	</script>
