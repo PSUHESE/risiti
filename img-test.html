@@ -18,6 +18,7 @@ document.querySelector('#file').addEventListener('change', function(e) {
   // These extra params aren't necessary but show that you can include other data.
  
   var xhr = new XMLHttpRequest();
+  xhr.addEventListener("loadend", loadEnd, false);
   xhr.open('POST', 'splice.php', true);
   
   xhr.upload.onprogress = function(e) {
@@ -41,10 +42,13 @@ document.querySelector('#file').addEventListener('change', function(e) {
   };
  
   xhr.send(fd);
-  	  	  document.getElementById('upload-progress').style.display = 'none';
-  	  document.getElementById('upload-p').style.display = 'block';
 
 }, false);
+
+function loadEnd(e) {
+      document.getElementById('upload-progress').style.display = 'none';
+  	  document.getElementById('upload-p').style.display = 'block';
+}
 	</script>
   </body>
 </html>
