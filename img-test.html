@@ -4,9 +4,42 @@
 	</head>
 	<body>
     <h1>Mashavu Risiti</h1>
-    <form action="splice.php" method="post" enctype="multipart/form-data">
-	    <p>Upload a receipt image: <input type="file" name="file" /></p>
-	    <p><input type="submit" value="Submit" /></p>
-	  </form>
+    <!--<form id="upload_form" action="splice.php" method="post" enctype="multipart/form-data">-->
+	    <p>Upload a receipt image: <input type="file" name="file" id="file"/></p>
+<!--	    <p><input type="submit" value="Submit" /></p>
+	</form>-->
+		<script>
+document.querySelector('#file').addEventListener('change', function(e) {
+  var file = this.files[0];
+ 
+  var fd = new FormData();
+  fd.append("file", file);
+  // These extra params aren't necessary but show that you can include other data.
+ 
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', 'splice.php', true);
+  
+  xhr.upload.onprogress = function(e) {
+    if (e.lengthComputable) {
+      var percentComplete = (e.loaded / e.total) * 100;
+      console.log(percentComplete + '% uploaded');
+    }
+  };
+ 
+  xhr.onload = function() {
+    if (this.status == 200) {
+      var resp = JSON.parse(this.response);
+ 
+      console.log('Server got:', resp);
+ 
+      var image = document.createElement('img');
+      image.src = resp.dataUrl;
+      document.body.appendChild(image);
+    };
+  };
+ 
+  xhr.send(fd);
+}, false);
+	</script>
   </body>
 </html>
