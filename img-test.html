@@ -9,7 +9,7 @@
 		<script>
 document.querySelector('#file').addEventListener('change', function(e) {
   var file = this.files[0];
-  document.getElementById('#file').style.display = 'none';
+  document.getElementById('file').style.display = 'none';
   	  $("#upload-progress").progressBar({ max: 100 });
   var fd = new FormData();
   fd.append("file", file);
@@ -39,7 +39,7 @@ document.querySelector('#file').addEventListener('change', function(e) {
   };
  
   xhr.send(fd);
-  document.getElementById('#file').style.display = 'block';
+  document.getElementById('file').style.display = 'block';
 }, false);
 	</script>
   </body>
