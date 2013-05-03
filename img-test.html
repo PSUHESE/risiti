@@ -2,15 +2,16 @@
   <head>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
 	</head>
 	<body>
     <h1>Mashavu Risiti</h1>
-	    <p>Upload a receipt image: <input type="file" name="file" id="file"/></p>
+	    <p id="upload-p">Upload a receipt image: <input type="file" name="file" id="file"/></p>
         <div id="upload-progress" />
 		<script>
 document.querySelector('#file').addEventListener('change', function(e) {
   var file = this.files[0];
-  document.getElementById('file').style.display = 'none';
+  document.getElementById('upload-p').style.display = 'none';
   	  $("#upload-progress").progressbar({ max: 100 });
   var fd = new FormData();
   fd.append("file", file);
@@ -37,10 +38,11 @@ document.querySelector('#file').addEventListener('change', function(e) {
       image.src = resp.dataUrl;
       document.body.appendChild(image);
     };
+	  document.getElementById('upload-p').style.display = 'block';
   };
  
   xhr.send(fd);
-  document.getElementById('file').style.display = 'block';
+
 }, false);
 	</script>
   </body>
