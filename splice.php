@@ -25,13 +25,13 @@
       $image = new Imagick($path);
     }
     
-    $max = $image->getQuantumRange(); 
-    $max = $max["quantumRangeLong"]; 
-    $image->thresholdImage(0.77 * $max); 
+    //$max = $image->getQuantumRange(); 
+    //$max = $max["quantumRangeLong"]; 
+    //$image->thresholdImage(0.77 * $max); 
     
     // resize the image so it matches the appropriate dimensions
     //$image->resizeImage(1240, 560, FILTER_UNDEFINED, 0.5);
-    $image->scaleImage(1240, 560, true);
+//    $image->scaleImage(1240, 560);
     # This should probably be changed so that it utilizes an array.
     $blockWidth = 27;
     $blockHeight = 34;
@@ -121,14 +121,14 @@
     for ($i = 0; $i < 6; $i++)
     {
       $dateParts[$i] = clone $image;
-      $dateParts[$i]->cropImage($blockWidth, $blockHeight, 998+($i * $blockWidth) + ($i * $blockSkip), 441);
+      $dateParts[$i]->cropImage($blockWidth, $blockHeight, 989+($i * $blockWidth) + ($i * $blockSkip), 441);
     }
     
     // create the boxes for the birthdate segments
     for ($i = 0; $i < 6; $i++)
     {
       $bdParts[$i] = clone $image;
-      $bdParts[$i]->cropImage($blockWidth, $blockHeight, 998+($i * $blockWidth) + ($i * $blockSkip), 235);
+      $bdParts[$i]->cropImage($blockWidth, $blockHeight, 989+($i * $blockWidth) + ($i * $blockSkip), 235);
     }
     
     # Save each image into the directory in question.
