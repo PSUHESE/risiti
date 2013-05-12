@@ -1,0 +1,5 @@
+*.txt
+*.csv
+*.sublime-project
+*.sublime-workspace
+.DS_STORE

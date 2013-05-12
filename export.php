@@ -1,4 +1,10 @@
 <?php
+  
+  /*
+   * Name of csv file to write to
+   */
+  $filename = 'dump.csv';
+
   $name = $_POST['name'];
 
   $phone = $_POST["phone"];
@@ -19,4 +25,10 @@
 
   echo $name . "," . $phone . "," . $birthday . "," . $village . "," . $weight . "," . $height . "," . $bmi . "," . $blood . "," . $heart;
 
+  $list = array ($name, $phone, $birthday, $village, $weight, $height, $bmi, $blood, $heart);
+
+  $fp = fopen($filename, 'a');
+  fputcsv($fp, $list);
+
+  fclose($fp);
 ?>
