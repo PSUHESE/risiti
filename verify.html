@@ -1,33 +1,32 @@
 <html>
   <head>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
-	<link rel="stylesheet" href="css/bootstrap.min.css" />
-	<link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
 
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
     <script>
-      $('#phpdiv').load('fun.php');
       $(document).ready(function() {
         $( "#progressbar" ).progressbar({
           value: false
         });
-       $('#phpdiv').load('test2.php');
+       $('#phpdiv').load('ocr.php');
      });
      </script>
   </head>
   <body>
     <div class="navbar">
 	    <div class="navbar-inner">
-	        <a class="brand" href="#">Mashavu Risiti</a>
+        <a class="brand" href="#">Mashavu Risiti</a>
 		    <ul class="nav">
-		        <li class="active"><a href="#">Data Entry</a></li>
+	        <li class="active"><a href="#">Data Entry</a></li>
 			    <li><a href="reports">Reports</a></li>
 		    </ul>
-		</div>
-	</div>
+		  </div>
+    </div>
     <h5>Verify each form field matches what's in the picture</h5>
     <h5>Then click submit</h5>
     <div id="phpdiv">Form should load here...</div>
   </body>
-</html> 
+</html>
