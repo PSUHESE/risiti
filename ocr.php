@@ -18,7 +18,7 @@ function callTess($inputImage, $outputFileName, $limits)
 function displayImage($image)
 {
   global $folder, $extension;
-  echo "<img src=\"" . $folder . DIRECTORY_SEPARATOR . $image . $extension . "\"/><br />";
+  echo "<img src=\"" . $folder . DIRECTORY_SEPARATOR . $image . $extension . "?rand=" . rand(1,1000) . "\"/><br />";
 }
 
 function displayText($name, $values)
@@ -67,7 +67,7 @@ foreach($filenames as $file)
   for($i = 0; $i <= $charnums[$file]; $i++)
   {
     if ($values[$file . $i] != " ")
-	$formStrings[$file] = $formStrings[$file] . $values[$file . $i];
+  $formStrings[$file] = $formStrings[$file] . $values[$file . $i];
   }
 }
 
