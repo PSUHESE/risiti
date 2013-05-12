@@ -186,7 +186,7 @@
       }
       
       $data = $caseField->getImageBlob();
-      file_put_contents($dateStr . "/case.jpg", $data);
+      file_put_contents($dateStr . "/case0.jpg", $data);
       
       for ($i = 0; $i < count($dateParts); $i++)
       {
