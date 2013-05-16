@@ -1,11 +1,23 @@
 <html>
   <head>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
   </head>
   <body>
-    <h1>Mashavu Risiti</h1>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <a class="brand" href="#">Mashavu Risiti</a>
+        <ul class="nav">
+          <li class="active"><a href="#">Upload</a></li>
+          <li><a href="verify.php">Data Entry</a></li>
+          <li><a href="reports.php">Reports</a></li>
+        </ul>
+      </div>
+    </div>
     <p id="upload-p">Upload a receipt image: <input type="file" name="file" id="file"/></p>
     <div id="upload-progress" />
     <script>

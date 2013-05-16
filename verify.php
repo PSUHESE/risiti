@@ -10,7 +10,6 @@ foreach(glob($dumpdir.'/*') as $file) {
 function displayDropDownContents()
 {
   global $dumps;
-
   foreach ($dumps as $dirName)
   {
     echo '<option value="'. $dirName . '">' . $dirName . '</option>';
@@ -39,8 +38,9 @@ function displayDropDownContents()
       <div class="navbar-inner">
         <a class="brand" href="#">Mashavu Risiti</a>
         <ul class="nav">
+          <li><a href="upload.html">Upload</a></li>
           <li class="active"><a href="#">Data Entry</a></li>
-          <li><a href="reports">Reports</a></li>
+          <li><a href="reports.php">Reports</a></li>
         </ul>
       </div>
     </div>
