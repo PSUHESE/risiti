@@ -1,10 +1,11 @@
 <?php
 
+  $folder = "scans"
   //$path = htmlspecialchars($_POST['path']);
   
   //session_start();
   
-  # this did some validation, but I changed it for testing purposes
+  # this did some validation, but I changed it for testing purposes 
   if (true) {
   
   $file = $_FILES['file']['tmp_name'];
@@ -31,7 +32,7 @@
     
     // resize the image so it matches the appropriate dimensions
     //$image->resizeImage(1240, 560, FILTER_UNDEFINED, 0.5);
-//    $image->scaleImage(1240, 560);
+    //    $image->scaleImage(1240, 560);
     # This should probably be changed so that it utilizes an array.
     $blockWidth = 27;
     $blockHeight = 34;
@@ -134,76 +135,76 @@
     # Save each image into the directory in question.
     $dateStr = date('dMY-H-i-s');
     
-    if (mkdir($dateStr, 0777, true))
+    if (mkdir($folder . DIRECTORY_SEPARATOR . $dateStr, 0777, true))
     {
       # But actually, arrays and stuff
       for ($i = 0; $i < count($nameParts); $i++)
       {
         $data = $nameParts[$i]->getImageBlob();
-        file_put_contents($dateStr . "/name".$i.".jpg", $data);
+        file_put_contents($folder . DIRECTORY_SEPARATOR . $dateStr . "/name".$i.".jpg", $data);
       }
       
       for ($i = 0; $i < count($bmiParts); $i++)
       {
         $data = $bmiParts[$i]->getImageBlob();
-        file_put_contents($dateStr . "/bmi".$i.".jpg", $data);
+        file_put_contents($folder . DIRECTORY_SEPARATOR . $dateStr . "/bmi".$i.".jpg", $data);
       }
       
       for ($i = 0; $i < count($phoneParts); $i++)
       {
         $data = $phoneParts[$i]->getImageBlob();
-        file_put_contents($dateStr . "/phone".$i.".jpg", $data);
+        file_put_contents($folder . DIRECTORY_SEPARATOR . $dateStr . "/phone".$i.".jpg", $data);
       }
       
       for ($i = 0; $i < count($villageParts); $i++)
       {
         $data = $villageParts[$i]->getImageBlob();
-        file_put_contents($dateStr . "/village".$i.".jpg", $data);
+        file_put_contents($folder . DIRECTORY_SEPARATOR . $dateStr . "/village".$i.".jpg", $data);
       }
       
       for ($i = 0; $i < count($weightParts); $i++)
       {
           $data = $weightParts[$i]->getImageBlob();
-          file_put_contents($dateStr . "/weight".$i.".jpg", $data);
+          file_put_contents($folder . DIRECTORY_SEPARATOR . $dateStr . "/weight".$i.".jpg", $data);
       }
       
       for ($i = 0; $i < count($bpOverParts); $i++)
       {
         $data = $bpOverParts[$i]->getImageBlob();
-        file_put_contents($dateStr . "/bloodOver".$i.".jpg", $data);
+        file_put_contents($folder . DIRECTORY_SEPARATOR . $dateStr . "/bloodOver".$i.".jpg", $data);
       }
       
       for ($i = 0; $i < count($bpUnderParts); $i++)
       {
         $data = $bpUnderParts[$i]->getImageBlob();
-        file_put_contents($dateStr . "/bloodUnder".$i.".jpg", $data);
+        file_put_contents($folder . DIRECTORY_SEPARATOR . $dateStr . "/bloodUnder".$i.".jpg", $data);
       }
       
       for ($i = 0; $i < count($hrParts); $i++)
       {
         $data = $hrParts[$i]->getImageBlob();
-        file_put_contents($dateStr . "/heart".$i.".jpg", $data);
+        file_put_contents($folder . DIRECTORY_SEPARATOR . $dateStr . "/heart".$i.".jpg", $data);
       }
       
       $data = $caseField->getImageBlob();
-      file_put_contents($dateStr . "/case0.jpg", $data);
+      file_put_contents($folder . DIRECTORY_SEPARATOR . $dateStr . "/case0.jpg", $data);
       
       for ($i = 0; $i < count($dateParts); $i++)
       {
         $data = $dateParts[$i]->getImageBlob();
-        file_put_contents($dateStr . "/date".$i.".jpg", $data);
+        file_put_contents($folder . DIRECTORY_SEPARATOR . $dateStr . "/date".$i.".jpg", $data);
       }
       
       for ($i = 0; $i < count($bdParts); $i++)
       {
         $data = $bdParts[$i]->getImageBlob();
-        file_put_contents($dateStr . "/birthday".$i.".jpg", $data);
+        file_put_contents($folder . DIRECTORY_SEPARATOR . $dateStr . "/birthday".$i.".jpg", $data);
       }
       
       for ($i = 0; $i < count($heightParts); $i++)
       {
         $data = $heightParts[$i]->getImageBlob();
-        file_put_contents($dateStr . "/height".$i.".jpg", $data);
+        file_put_contents($folder . DIRECTORY_SEPARATOR . $dateStr . "/height".$i.".jpg", $data);
       }
     }
     else{
